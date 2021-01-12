@@ -1,4 +1,4 @@
-package Dependencias;
+package Dependency;
 
 import com.google.common.io.Files;
 import java.io.IOException;

@@ -31,3 +31,17 @@ def myClosure = { // closure
 
 def a = myClosure
 a()
+
+
+class MyClass {
+	String varTest = "Variable inside a Class"
+	def func () {
+		println "varTest = $varTest"
+	}
+}
+
+MyClass c = new MyClass()
+c.func()
+
+
+

@@ -1,0 +1,26 @@
+plugins {
+    // Apply the application plugin to add support for building a CLI application in Java.
+    id 'application'
+}
+
+application {
+    // Define the main class for the application.
+    mainClass = 'Project.App'
+	applicationName = "testAplication"
+	executableDir = "TestingFolder"
+}
+
+def variable = 10
+println "testing application"
+
+println "variable value = $variable"
+
+variable = "now it's a string"
+
+println "new value = " + variable
+
+function(variable)
+
+def function (x) {
+	println "inside function = $x"
+}

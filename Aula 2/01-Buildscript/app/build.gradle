@@ -6,8 +6,8 @@ plugins {
 application {
     // Define the main class for the application.
     mainClass = 'Project.App'
-	applicationName = "testAplication"
-	executableDir = "TestingFolder"
+    applicationName = "testAplication"
+    executableDir = "TestingFolder"
 }
 
 def variable = 10

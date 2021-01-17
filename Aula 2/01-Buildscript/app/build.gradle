@@ -24,3 +24,10 @@ function(variable)
 def function (x) {
 	println "inside function = $x"
 }
+
+def myClosure = { // closure
+	println "in my custon closure"
+}
+
+def a = myClosure
+a()

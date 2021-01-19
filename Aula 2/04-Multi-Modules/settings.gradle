@@ -1,0 +1,2 @@
+rootProject.name = '04-Multi-Modules'
+include('games', 'chess', 'checkers')

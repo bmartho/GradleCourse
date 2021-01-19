@@ -1,0 +1,16 @@
+plugins {
+    id 'application'
+}
+
+application {
+    mainClass = 'Multi.Modules.Main'
+}
+
+dependencies {
+    implementation project(':chess')
+	implementation project(':checkers')
+}
+
+run {
+    standardInput = System.in
+}

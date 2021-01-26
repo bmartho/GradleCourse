@@ -1,0 +1,37 @@
+task turnOnTheCar {
+    doLast {
+        println ("turnOnTheCar")
+    }
+}
+
+task accelerateTheCar {
+    dependsOn "turnOnTheCar"
+    finalizedBy "speedUp"
+    doLast {
+        println ("accelerateTheCar")
+    }
+}
+
+task taskAfterDefaultTask {
+    dependsOn "projects"
+    doLast {
+        println ("taskAfterDefaultTask")
+    }
+}
+
+task speedUp {
+    doLast {
+        println ("speedUp")
+    }
+}
+
+task turnTheRadio {
+    mustRunAfter "turnOnTheCar"
+    doLast {
+        println ("turnTheRadio")
+    }
+}
+
+task driveCrazy {
+    dependsOn = ["turnTheRadio", "accelerateTheCar"]
+}

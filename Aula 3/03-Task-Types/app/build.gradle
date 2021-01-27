@@ -1,0 +1,35 @@
+plugins {
+    id 'application'
+}
+
+repositories {    
+    jcenter()
+}
+
+dependencies {
+    testImplementation 'junit:junit:4.13'
+}
+
+application {
+    mainClass = 'Task.Types.App'
+}
+
+task deleteBuild(type: Delete) {
+    delete 'build'
+}
+
+task copyBuild(type: Copy) {
+    from 'build'
+    into '../Release'
+}
+
+task zipReleaseToTestTeam(type: Zip) {
+    baseName = 'ExecutablesToTestTeam'
+    destinationDir = file('../ExecutablesToTestTeam')
+    from 'build/distributions'
+}
+
+task generateRelease {
+    dependsOn = ["build", "test"]
+    finalizedBy = ["copyBuild", "zipReleaseToTestTeam", "deleteBuild"]
+}

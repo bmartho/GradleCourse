@@ -25,13 +25,13 @@ task speedUp {
     }
 }
 
-task turnTheRadio {
+task turnOnTheRadio {
     mustRunAfter "turnOnTheCar"
     doLast {
-        println ("turnTheRadio")
+        println ("turnOnTheRadio")
     }
 }
 
 task driveCrazy {
-    dependsOn = ["turnTheRadio", "accelerateTheCar"]
+    dependsOn = ["turnOnTheRadio", "accelerateTheCar"]
 }
